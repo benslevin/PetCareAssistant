@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCateAssistant", "WebApplication1\PetCateAssistant.csproj", "{73D07543-86F3-4AE6-80CE-5415809228E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCateAssistant", "PetCateAssistant\PetCateAssistant.csproj", "{73D07543-86F3-4AE6-80CE-5415809228E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCareAssistant.Tests", "PetCareAssistant.Tests\PetCareAssistant.Tests.csproj", "{9734B07C-0BD8-49DF-9808-66BDA6CD3B16}"
 EndProject
