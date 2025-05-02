@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCateAssistant", "WebApplication1\PetCateAssistant.csproj", "{73D07543-86F3-4AE6-80CE-5415809228E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCareAssistant.Tests", "PetCareAssistant.Tests\PetCareAssistant.Tests.csproj", "{9734B07C-0BD8-49DF-9808-66BDA6CD3B16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73D07543-86F3-4AE6-80CE-5415809228E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D07543-86F3-4AE6-80CE-5415809228E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D07543-86F3-4AE6-80CE-5415809228E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D07543-86F3-4AE6-80CE-5415809228E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9734B07C-0BD8-49DF-9808-66BDA6CD3B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9734B07C-0BD8-49DF-9808-66BDA6CD3B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9734B07C-0BD8-49DF-9808-66BDA6CD3B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9734B07C-0BD8-49DF-9808-66BDA6CD3B16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A1F51AA-A66B-40F6-AE90-C1AB45DE7681}
+	EndGlobalSection
+EndGlobal
