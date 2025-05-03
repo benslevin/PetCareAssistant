@@ -9,5 +9,6 @@ namespace PetCateAssistant.Services
         Task AddAsync(Pet pet);
         Task<bool> DeleteAsync(string id);
         Task SaveAsync();
+        Task InitializeAsync();
     }
 }

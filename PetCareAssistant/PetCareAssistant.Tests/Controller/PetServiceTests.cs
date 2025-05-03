@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.Extensions.Options;
 using Moq;
 using PetCateAssistant.Models;
 using PetCateAssistant.Services;
@@ -15,11 +16,12 @@ namespace PetCareAssistant.Tests
         public PetServiceTests()
         {
             _fileServiceMock = new Mock<IFileService>();
-
             _fileServiceMock.Setup(f => f.Exists(It.IsAny<string>())).Returns(true);
             _fileServiceMock.Setup(f => f.ReadAllText(It.IsAny<string>())).Returns("[]");
 
-            _service = new PetService(_fileServiceMock.Object);
+            var filePath = Options.Create(new PetDataOptions { FilePath = ""});
+
+            _service = new PetService(_fileServiceMock.Object, filePath);
         }
 
         [Fact]

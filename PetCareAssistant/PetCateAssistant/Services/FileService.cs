@@ -6,5 +6,7 @@
         public string ReadAllText(string filePath) => File.ReadAllText(filePath);
         public void WriteAllText(string filePath, string content) => File.WriteAllText(filePath, content);
         public void Create(string filePath) => File.Create(filePath).Dispose();
+        public void CreateDirectory(string directoryPath) => Directory.CreateDirectory(directoryPath);
+        public string GetDirectoryName(string directoryPath) => Path.GetDirectoryName(directoryPath);
     }
 }

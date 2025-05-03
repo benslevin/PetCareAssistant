@@ -1,26 +1,34 @@
-﻿using PetCateAssistant.Models;
+﻿using Microsoft.Extensions.Options;
+using PetCateAssistant.Models;
 using System.Text.Json;
 
 namespace PetCateAssistant.Services
 {
     public class PetService : IPetService
     {
-        private readonly string _filePath = Path.Combine("Data", "pets.json");
+        private readonly string _filePath;
         private readonly IFileService _fileService;
         private List<Pet> _pets = new();
 
-        public PetService(IFileService fileService)
+        public PetService(IFileService fileService, IOptions<PetDataOptions> options)
         {
             _fileService = fileService;
+            _filePath = options.Value.FilePath;
             if (_fileService.Exists(_filePath))
             {
                 var json = _fileService.ReadAllText(_filePath);
                 _pets = JsonSerializer.Deserialize<List<Pet>>(json) ?? new();
             }
-            else
+        }
+
+        public Task InitializeAsync()
+        {
+            if (!_fileService.Exists(_filePath))
             {
-                _fileService.Create(_filePath);
+                _fileService.CreateDirectory(_fileService.GetDirectoryName(_filePath)!);
+                _fileService.WriteAllText(_filePath, "[]");
             }
+            return Task.CompletedTask;
         }
 
         public Task AddAsync(Pet pet)
